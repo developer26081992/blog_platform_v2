@@ -4,7 +4,7 @@ Full stack blog examination project. Part A uses Prisma ORM and PostgreSQL hoste
 
 ## Submission URLs
 
-- Public GitHub repository URL: **Pending manual publication**
+- Public GitHub repository URL: https://github.com/developer26081992/blog_platform_v2
 - Live Vercel URL: **Pending manual deployment**
 
 Replace both pending values with the actual URLs after publishing. Deployment and live testing are not complete until these URLs exist and are checked.
@@ -101,7 +101,7 @@ Use the values from the local `.env`, which has been updated to the required nam
 2. From this project folder, add your repository URL and push the existing local commit:
 
    ```sh
-   git remote add origin https://github.com/YOUR_GITHUB_USERNAME/blog-platform-v2.git
+   git remote add origin https://github.com/developer26081992/blog_platform_v2.git
    git push -u origin main
    ```
 
