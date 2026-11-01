@@ -5,9 +5,9 @@ Full stack blog examination project. Part A uses Prisma ORM and PostgreSQL hoste
 ## Submission URLs
 
 - Public GitHub repository URL: https://github.com/developer26081992/blog_platform_v2
-- Live Vercel URL: **Pending manual deployment**
+- Live Vercel URL (supplied; not yet working): https://blog-platform-v2-omega.vercel.app
 
-Replace both pending values with the actual URLs after publishing. Deployment and live testing are not complete until these URLs exist and are checked.
+Deployment check on 1 November 2026: the supplied Vercel URL returned `404: DEPLOYMENT_NOT_FOUND`. The public app and its live authentication/post flows could not be tested. Confirm a successful production deployment and its exact domain in Vercel, then update this status after testing. The GitHub repository is public and accessible.
 
 ## AI usage declaration
 
