@@ -5,7 +5,7 @@ import { compare, getRounds } from "bcryptjs";
 import { SignJWT } from "jose/jwt/sign";
 import { prisma } from "../lib/db";
 
-const base = "http://localhost:3000";
+const base = process.argv[2] ?? "http://localhost:3000";
 const email = `auth-test-${randomUUID()}@example.com`;
 const password = "ExamTest123!";
 const post = (path: string, body: unknown) => fetch(`${base}${path}`, {

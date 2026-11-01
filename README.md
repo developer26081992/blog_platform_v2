@@ -5,9 +5,9 @@ Full stack blog examination project. Part A uses Prisma ORM and PostgreSQL hoste
 ## Submission URLs
 
 - Public GitHub repository URL: https://github.com/developer26081992/blog_platform_v2
-- Live Vercel URL (supplied; not yet working): https://blog-platform-v2-omega.vercel.app
+- Live Vercel URL: https://blog-platform-v2-omega.vercel.app
 
-Deployment check on 1 November 2026: the supplied Vercel URL returned `404: DEPLOYMENT_NOT_FOUND`. The public app and its live authentication/post flows could not be tested. Confirm a successful production deployment and its exact domain in Vercel, then update this status after testing. The GitHub repository is public and accessible.
+Production deployment verified on 1 November 2026. Both URLs are public and accessible without a Vercel account. Live tests passed for registration, bcrypt cost 12, login, HttpOnly/Secure cookies, dashboard protection, and rejection of expired or tampered JWTs. Browser tests passed for server-side Zod validation, creating drafts, draft privacy, the author's post table, publishing, public article author/categories, editing, unpublishing, and deleting posts. Temporary test records were removed after verification.
 
 ## AI usage declaration
 
@@ -59,6 +59,8 @@ Email/password authentication is implemented directly with bcrypt and signed JWT
 Run `npm run dev`, then open `/register` or `/login` to use the forms. Seed demonstration accounts use the password documented above.
 
 To verify Part B, run `npm run build`, then `npm start` and, in another terminal, `npm run test:auth`. This integration test uses the configured database, creates and removes one temporary account, and checks registration, bcrypt cost 12, duplicate emails, login, cookie attributes, and rejection of absent, expired, and tampered JWTs. The test expects a production server at `http://localhost:3000`.
+
+To test the live production deployment instead, run `npm run test:auth -- https://blog-platform-v2-omega.vercel.app`. The local `.env` must point to the deployment's database and use the same JWT signing key.
 
 - [Next.js route handlers and middleware](https://nextjs.org/docs/15/app/getting-started/route-handlers-and-middleware)
 - [jose JWT library](https://github.com/panva/jose)
@@ -115,7 +117,7 @@ Use the values from the local `.env`, which has been updated to the required nam
 4. Use `npm ci` as Install Command and `npm run build` as Build Command. These settings are also declared in `vercel.json`.
 5. Deploy. The build runs `prisma generate && prisma migrate deploy && next build`. Check the build log confirms migrations succeeded.
 6. Open the production URL without signing in to Vercel. If deployment protection blocks examiners, configure the production deployment for public access in the Vercel project settings.
-7. Replace both pending URLs at the top of this README, commit the README update, and push it:
+7. If the repository or production domain changes, update the URLs at the top of this README, commit the README update, and push it:
 
    ```sh
    git add README.md
