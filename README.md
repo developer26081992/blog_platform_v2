@@ -2,6 +2,8 @@
 
 Full stack blog examination project. Part A uses Prisma ORM and PostgreSQL hosted on Neon.
 
+The interface uses a responsive editorial design with shared navigation, an article grid, readable article pages, styled authentication forms, and an author workspace. Styling was reviewed at 1440px, 768px, 390px, and 375px with no page overflow. Authentication and post CRUD regression checks passed after styling, including true 404 responses for draft or missing articles.
+
 ## Submission URLs
 
 - Public GitHub repository URL: https://github.com/developer26081992/blog_platform_v2
@@ -11,7 +13,7 @@ Production deployment verified on 1 November 2026. Both URLs are public and acce
 
 ## AI usage declaration
 
-OpenAI Codex assisted with project setup, Prisma schema design, seed code, authentication routes, JWT middleware, post pages and Server Actions, tests, documentation, and development guidance. The developer must review the work and verify it before submission. Seed article text is AI-generated demonstration content.
+OpenAI Codex assisted with project setup, Prisma schema design, seed code, authentication routes, JWT middleware, post pages and Server Actions, interface design and styling, tests, documentation, and development guidance. The developer must review the work and verify it before submission. Seed article text is AI-generated demonstration content.
 
 ## Local database setup
 
